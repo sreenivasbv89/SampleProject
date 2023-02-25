@@ -32,7 +32,6 @@ public class BooksService {
 
     public Books findByIdGiven(int id) {
         final Optional<Books> byId = bookRepository.findByBookId(id);
-
         final Books book = byId.get();
         return book;
 
