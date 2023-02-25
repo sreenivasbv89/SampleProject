@@ -28,6 +28,8 @@ public class BookController {
 
     @GetMapping("/findByIdGiven/{id1}")
     public Books findByIdGiven1(@PathVariable int id1){
-        return booksService.findByIdGiven(id1);
+        final Books byIdGiven = booksService.findByIdGiven(id1);
+        return byIdGiven;
+
     }
 }
