@@ -20,8 +20,14 @@ public class BookController {
     public Books updateBook(@RequestBody Books book){
         return booksService.updateBook(book);
     }
+
     @GetMapping("/findByIdGiven/{id}")
     public Books findByIdGiven(@PathVariable int id){
         return booksService.findByIdGiven(id);
+    }
+
+    @GetMapping("/findByIdGiven/{id1}")
+    public Books findByIdGiven1(@PathVariable int id1){
+        return booksService.findByIdGiven(id1);
     }
 }
